@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <style>
+
+    
+
+    .block {
+        
+        background: url(code.jpg);
+        display: block;
+
+    }
+
+    .blockBut {
+        display: block;
+        background: transparent;
+        border: 2px solid #888888; 
+        text-align: center;
+        color: #dddddd;
+        margin: auto;
+        width: 250px;
+        height: 70px;
+        background: rgba(0, 0, 0, 0.0);
+        font-family: 'Segoe UI';
+        transition: 150ms linear;
+        
+    }
+    .blockBut:hover {
+        border: 2px solid #ffffff; 
+        color: #ffffff;
+        background: rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+        transform: scale(1.02);
+    }
+    .txt {
+
+        font-size: 30px;
+        text-align: center;
+
+    }
+    .txt2 {
+
+        font-size: 20px;
+        text-align: center;
+
+    }
+
+    </style>
+</head>
+<body style="background-color: #000000;">
+<hr>
+<br>
+<h1 class="txt" style="color: #00ff00; font-family: 'Segoe UI';" id="out0">Products by interPQProg</h1>
+<br>
+<hr>
+<div class="block">
+<br><br><br>
+<div class="blockBut" onclick='window.open("https://div648.github.io/products/calculator/");'>
+<p class="txt2">Калькулятор</p>
+
+    
+</div>
+<br><br><br>
+</div>
+<script src="calculator/Q.js"></script>
+<script>
+var r = random(0, 255);
+var g = random(0, 255);
+var b = random(0, 255);
+var rf = random(0, 1);
+var gf = random(0, 1);
+var bf = random(0, 1);
+
+setInterval(function() {
+if (r >= 255 && rf) {
+rf = false;
+} else if (r <= 0 && !rf) {
+rf = true;    
+}
+if (g >= 255 && gf){
+gf = false;
+} else if (g <= 0 && !gf) {
+gf = true;
+}
+if (b >= 255 && bf){
+bf = false;
+} else if (b <= 0 && !bf) {
+bf = true;
+}
+
+if (rf) {
+r++;
+} else {
+r--;
+}
+
+if (gf) {
+g++;
+} else {
+g--;
+}
+
+if (bf) {
+b++;
+} else {
+b--;
+}
+changeStyl('out0', 'color', 'rgb('+r+','+g+','+b+')');
+}, 20);
+
+</script>
+</body>
+</html>
